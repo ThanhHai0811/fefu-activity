@@ -12,9 +12,6 @@
 		0488FA42270E045F00A5EE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA41270E045F00A5EE20 /* ViewController.swift */; };
 		0488FA45270E045F00A5EE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA43270E045F00A5EE20 /* Main.storyboard */; };
 		0488FA4A270E046100A5EE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA48270E046100A5EE20 /* LaunchScreen.storyboard */; };
-		0488FA55270E046100A5EE20 /* __________Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA54270E046100A5EE20 /* __________Tests.swift */; };
-		0488FA5F270E046100A5EE20 /* __________UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA5E270E046100A5EE20 /* __________UITests.swift */; };
-		0488FA61270E046100A5EE20 /* __________UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA60270E046100A5EE20 /* __________UITestsLaunchTests.swift */; };
 		0488FA73270E959600A5EE20 /* MH2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA71270E959600A5EE20 /* MH2ViewController.swift */; };
 		0488FA74270E959600A5EE20 /* MH2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA72270E959600A5EE20 /* MH2ViewController.xib */; };
 		0488FA77270EA1C400A5EE20 /* MH3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA75270EA1C400A5EE20 /* MH3ViewController.swift */; };
@@ -55,10 +52,7 @@
 		0488FA49270E046100A5EE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0488FA4B270E046100A5EE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0488FA50270E046100A5EE20 /* ДВФУПримерTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ДВФУПримерTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0488FA54270E046100A5EE20 /* __________Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__________Tests.swift"; sourceTree = "<group>"; };
 		0488FA5A270E046100A5EE20 /* ДВФУПримерUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ДВФУПримерUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0488FA5E270E046100A5EE20 /* __________UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__________UITests.swift"; sourceTree = "<group>"; };
-		0488FA60270E046100A5EE20 /* __________UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "__________UITestsLaunchTests.swift"; sourceTree = "<group>"; };
 		0488FA71270E959600A5EE20 /* MH2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH2ViewController.swift; sourceTree = "<group>"; };
 		0488FA72270E959600A5EE20 /* MH2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MH2ViewController.xib; sourceTree = "<group>"; };
 		0488FA75270EA1C400A5EE20 /* MH3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH3ViewController.swift; sourceTree = "<group>"; };
@@ -102,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				0488FA3C270E045F00A5EE20 /* ДВФУПример */,
-				0488FA53270E046100A5EE20 /* ДВФУПримерTests */,
-				0488FA5D270E046100A5EE20 /* ДВФУПримерUITests */,
 				0488FA3B270E045F00A5EE20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,23 +129,6 @@
 				0488FA4B270E046100A5EE20 /* Info.plist */,
 			);
 			path = "ДВФУПример";
-			sourceTree = "<group>";
-		};
-		0488FA53270E046100A5EE20 /* ДВФУПримерTests */ = {
-			isa = PBXGroup;
-			children = (
-				0488FA54270E046100A5EE20 /* __________Tests.swift */,
-			);
-			path = "ДВФУПримерTests";
-			sourceTree = "<group>";
-		};
-		0488FA5D270E046100A5EE20 /* ДВФУПримерUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0488FA5E270E046100A5EE20 /* __________UITests.swift */,
-				0488FA60270E046100A5EE20 /* __________UITestsLaunchTests.swift */,
-			);
-			path = "ДВФУПримерUITests";
 			sourceTree = "<group>";
 		};
 		0488FA79270EA49600A5EE20 /* Image */ = {
@@ -320,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0488FA55270E046100A5EE20 /* __________Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,8 +302,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0488FA61270E046100A5EE20 /* __________UITestsLaunchTests.swift in Sources */,
-				0488FA5F270E046100A5EE20 /* __________UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

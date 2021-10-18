@@ -7,19 +7,49 @@
 
 import UIKit
 
-class MH2ViewController: UIViewController {
-
+class MH2ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var Pw1: UITextField!
     let button1 = UIButton(type: .custom)
     @IBOutlet weak var Pw2: UITextField!
-    @IBOutlet weak var MyButton: UIButton!
     let button2 = UIButton(type: .custom)
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var GenderPicker: UITextField!
+    @IBOutlet weak var MyButton: UIButton!
+    let genders = ["", "Мужской", "Женский"]
+    let genderPickerView = UIPickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        genderPickerView.delegate = self
+        genderPickerView.dataSource = self
+        GenderPicker.inputView = genderPickerView
+        commonInit()
+    }
+    private func commonInit(){
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        GenderPicker.tintColor = .clear
         MyButton.setTitle("Продолжить", for: .normal)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .always
+        navigationItem.title = "Регистрация"
+        navigationItem.prompt = ""
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return genders.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genders[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        GenderPicker.text = genders[row]
+        GenderPicker.resignFirstResponder()
     }
     override func viewDidAppear(_ animated: Bool) {
-        MyButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
         Pw1.rightViewMode = .unlessEditing
         button1.setImage(UIImage(named: "eyeclosed.png"), for: .normal)
         button1.imageEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 0)
@@ -34,6 +64,7 @@ class MH2ViewController: UIViewController {
         Pw2.rightView = button2
         Pw2.rightViewMode = .always
     }
+    
     @IBAction func btnPw1(_ sender: Any) {
         (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
         if (sender as! UIButton).isSelected {
@@ -44,7 +75,6 @@ class MH2ViewController: UIViewController {
             button1.setImage(UIImage(named: "eyeclosed.png"), for: .normal)
         }
     }
-    
     
     @IBAction func btnPw2(_ sender: Any) {
         (sender as! UIButton).isSelected = !(sender as! UIButton).isSelected
