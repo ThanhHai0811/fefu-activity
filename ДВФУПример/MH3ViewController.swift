@@ -11,6 +11,7 @@ class MH3ViewController: UIViewController {
 
     @IBOutlet weak var Pw: UITextField!
     let button = UIButton(type: .custom)
+    @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var MyImage: UIImageView!
     @IBOutlet weak var MyButton: UIButton!
     override func viewDidLoad() {
@@ -49,6 +50,15 @@ class MH3ViewController: UIViewController {
             self.Pw.isSecureTextEntry = true
             button.setImage(UIImage(named: "eyeclosed.png"), for: .normal)
         }
+        setuserName()
+    }
+    func setuserName(){
+        let username = FEFUUsersDefaults.shared.getUserName()
+        loginTextField.text = username
     }
    
+    @IBAction func didTaplogin(_ sender: Any) {
+        let userName = loginTextField.text ?? ""
+        FEFUUsersDefaults.shared.saveUserName(userName: userName)
+    }
 }

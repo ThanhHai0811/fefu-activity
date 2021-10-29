@@ -82,6 +82,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Group 49.png" translatesAutoresizingMaskIntoConstraints="NO" id="YsJ-oq-nzR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="267"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,15 +98,18 @@
                             <constraint firstItem="tHy-jr-qoj" firstAttribute="top" secondItem="Ght-HD-ub6" secondAttribute="bottom" constant="29.5" id="8zG-Ny-Z5U"/>
                             <constraint firstItem="slr-Lb-iMW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Cse-5o-naS"/>
                             <constraint firstItem="Rr2-Z1-vyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Fpp-nX-LV4"/>
+                            <constraint firstItem="YsJ-oq-nzR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GfS-PP-SPc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tHy-jr-qoj" secondAttribute="trailing" constant="152" id="HzA-Hh-pDD"/>
                             <constraint firstItem="tHy-jr-qoj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="LAj-g7-OPM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hRn-Lb-Q20" secondAttribute="bottom" constant="74" id="UjX-Xd-ohY"/>
+                            <constraint firstItem="YsJ-oq-nzR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wqx-O2-PEI"/>
                             <constraint firstItem="slr-Lb-iMW" firstAttribute="top" secondItem="2ej-jZ-DnI" secondAttribute="bottom" constant="13.17" id="ceD-Ed-0k4"/>
                             <constraint firstItem="Rr2-Z1-vyd" firstAttribute="top" secondItem="slr-Lb-iMW" secondAttribute="bottom" constant="83.5" id="eti-eF-x5I"/>
                             <constraint firstItem="2ej-jZ-DnI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="fB6-gK-gah"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="slr-Lb-iMW" secondAttribute="trailing" constant="40" id="fi9-fd-BKI"/>
                             <constraint firstItem="Ght-HD-ub6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="176" id="hW7-d1-tuI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ght-HD-ub6" secondAttribute="trailing" constant="178.68000000000001" id="piH-o3-m5p"/>
+                            <constraint firstItem="YsJ-oq-nzR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="snf-bf-tnA"/>
                             <constraint firstItem="Ght-HD-ub6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="178.68000000000001" id="z9q-VQ-X7L"/>
                         </constraints>
                     </view>
@@ -116,86 +122,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1826.0869565217392" y="-612.05357142857144"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fax-mG-t2w">
-            <objects>
-                <navigationController id="xgG-Tw-ieN" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="oZo-qB-aXf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dxi-AO-LtL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Ced-hF-7vZ" kind="relationship" relationship="rootViewController" id="3io-oL-EsZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FQt-QI-dFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1103" y="33"/>
-        </scene>
-        <!--Активности-->
-        <scene sceneID="9iz-ME-Rfx">
-            <objects>
-                <viewController id="Ced-hF-7vZ" customClass="MH4ViewController" customModule="ДВФУПример" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="g1X-50-OQ3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Время потренить" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wy8-VS-WFW">
-                                <rect key="frame" x="120" y="362" width="185" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="6lJ-Tn-W5j"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажимай на кнопку ниже и начинаем трекать активность" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ir-ku-KNR">
-                                <rect key="frame" x="40" y="405" width="336" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="pfh-9e-bfD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWy-9u-ZO5">
-                                <rect key="frame" x="32" y="660" width="350" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="qyP-2w-2BC"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Старт">
-                                            <attributes>
-                                                <font key="NSFont" size="17" name="Helvetica-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Ldn-i5-e7b"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="3ir-ku-KNR" firstAttribute="leading" secondItem="g1X-50-OQ3" secondAttribute="leading" constant="40" id="CpJ-8m-dz1"/>
-                            <constraint firstItem="Ldn-i5-e7b" firstAttribute="trailing" secondItem="Wy8-VS-WFW" secondAttribute="trailing" constant="109" id="Eak-cy-KaN"/>
-                            <constraint firstItem="EWy-9u-ZO5" firstAttribute="top" secondItem="3ir-ku-KNR" secondAttribute="bottom" constant="207" id="O7v-xV-TLu"/>
-                            <constraint firstItem="Wy8-VS-WFW" firstAttribute="top" secondItem="Ldn-i5-e7b" secondAttribute="top" constant="274" id="Ybu-Gh-BUL"/>
-                            <constraint firstItem="3ir-ku-KNR" firstAttribute="top" secondItem="Wy8-VS-WFW" secondAttribute="bottom" constant="21" id="gaW-8s-bNB"/>
-                            <constraint firstItem="Ldn-i5-e7b" firstAttribute="trailing" secondItem="EWy-9u-ZO5" secondAttribute="trailing" constant="32" id="pEZ-lF-kAp"/>
-                            <constraint firstItem="Ldn-i5-e7b" firstAttribute="trailing" secondItem="3ir-ku-KNR" secondAttribute="trailing" constant="38" id="qDe-QS-xnd"/>
-                            <constraint firstItem="Wy8-VS-WFW" firstAttribute="leading" secondItem="Ldn-i5-e7b" secondAttribute="leading" constant="120" id="qlo-g1-L74"/>
-                            <constraint firstItem="EWy-9u-ZO5" firstAttribute="leading" secondItem="Ldn-i5-e7b" secondAttribute="leading" constant="32" id="wai-yh-fBN"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Активности" id="1e5-3i-qjh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SLq-Yw-T8I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1824.6376811594205" y="32.8125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Nu5-xa-nNk">
@@ -379,6 +305,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Button">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTaplogin:" destination="pCH-e0-0TI" eventType="touchUpInside" id="m2C-wV-jKb"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="74F-Gg-oSR">
                                 <rect key="frame" x="-25.5" y="421.5" width="466.5" height="498.5"/>
@@ -425,6 +354,7 @@
                         <outlet property="MyButton" destination="Q0w-Wh-cFn" id="jR2-wR-Uhl"/>
                         <outlet property="MyImage" destination="74F-Gg-oSR" id="97c-gG-77j"/>
                         <outlet property="Pw" destination="pSe-ex-coJ" id="nbR-7D-qY7"/>
+                        <outlet property="loginTextField" destination="6R1-Ek-ttx" id="Ikm-RQ-OcO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18R-1L-tZJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -455,6 +385,7 @@
         <image name="ACTIVITY.png" width="66" height="7"/>
         <image name="Group 10.png" width="22" height="27"/>
         <image name="Group 17.png" width="58" height="67"/>
+        <image name="Group 49.png" width="414" height="267"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
