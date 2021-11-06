@@ -13,6 +13,7 @@ class ActivityDetailsViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var StateDescription: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var StartButton: UIButton!
+    @IBOutlet weak var StartButton1: UIButton!
     let ArrayDay = ["Вчера","Май 2022 года"]
     let ArrayKm = ["14.32 км","14.32 км"]
     let ArrayTime1 = ["2 часа 46 минут","2 часа 46 минут"]
@@ -28,19 +29,21 @@ class ActivityDetailsViewController: UIViewController, UITableViewDelegate, UITa
         StateDescription.text = "Нажимай на кнопку ниже и начинаем трекать активность"
         StartButton.setTitle("Старт", for: .normal)
         StartButton.titleLabel?.font = .boldSystemFont(ofSize: 17)
-        StartButton.setTitle("Старт", for: .normal)
-        StartButton.titleLabel?.font = .boldSystemFont(ofSize: 17)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         let nidName = UINib(nibName: "Table1ViewCell", bundle: nil)
         tableView.register(nidName, forCellReuseIdentifier: "table1ViewCell")
+        StartButton1.setTitle("Старт", for: .normal)
+        StartButton1.titleLabel?.font = .boldSystemFont(ofSize: 17)
         commonInit1()
     }
     @IBAction func DidTapButton(_ sender: Any) {
         emtyStateView.isHidden = true
+        StartButton.isHidden = true
         tableView.isHidden = false
+        StartButton1.isHidden = false
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ArrayDay.count
@@ -60,6 +63,10 @@ class ActivityDetailsViewController: UIViewController, UITableViewDelegate, UITa
         vc.commonInit2(ArrayVehicle[indexPath.item], image: "bicycle.circle.fill", km: ArrayKm[indexPath.item], time2: ArrayTime2[indexPath.item], time3: ArrayTime3[indexPath.item], vehicle: ArrayVehicle[indexPath.item], time4: ArrayTime4[indexPath.item], time5: ArrayTime2[indexPath.item])
         self.navigationController?.pushViewController(vc, animated: true)
         self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    @IBAction func DidTapStartButton1(_ sender: Any) {
+        let NewActivityView = NewActivityViewController(nibName: "NewActivityViewController", bundle: nil)
+        navigationController?.pushViewController(NewActivityView, animated: true)
     }
 }
 

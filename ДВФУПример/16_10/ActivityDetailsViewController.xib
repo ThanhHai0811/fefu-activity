@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityDetailsViewController" customModule="ДВФУПример" customModuleProvider="target">
             <connections>
                 <outlet property="StartButton" destination="GvH-I9-uuP" id="bw3-XD-62u"/>
+                <outlet property="StartButton1" destination="CBR-UF-ebN" id="JPM-qn-eFp"/>
                 <outlet property="StateDescription" destination="De3-GN-trx" id="4sN-3t-j36"/>
                 <outlet property="StateTitle" destination="xdF-eE-A7C" id="ljD-ZM-B2w"/>
                 <outlet property="emtyStateView" destination="Hik-uc-Tfp" id="aRS-JY-SvZ"/>
@@ -71,6 +72,17 @@
                         <constraint firstAttribute="height" constant="91" id="xhj-Me-EFQ"/>
                     </constraints>
                 </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBR-UF-ebN">
+                    <rect key="frame" x="32" y="791" width="350" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9Qk-BS-lQN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <connections>
+                        <action selector="DidTapStartButton1:" destination="-1" eventType="touchUpInside" id="gkb-n4-L2p"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,8 +91,11 @@
                 <constraint firstItem="GvH-I9-uuP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="6IQ-ID-bSw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hik-uc-Tfp" secondAttribute="trailing" constant="39" id="B9O-Wo-vHu"/>
                 <constraint firstItem="Hik-uc-Tfp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="270" id="CsI-KK-agG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CBR-UF-ebN" secondAttribute="bottom" constant="21" id="M8l-eI-qHA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CBR-UF-ebN" secondAttribute="trailing" constant="32" id="Xbh-cH-ILO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qWy-wO-L2Q" secondAttribute="bottom" id="bad-tW-rG8"/>
                 <constraint firstItem="qWy-wO-L2Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dk2-bX-ykJ"/>
+                <constraint firstItem="CBR-UF-ebN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="kiM-ng-xDZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GvH-I9-uuP" secondAttribute="bottom" constant="21" id="lFU-ZI-T2c"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GvH-I9-uuP" secondAttribute="trailing" constant="32" id="m4m-tk-Hyb"/>
                 <constraint firstItem="Hik-uc-Tfp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="39" id="ndg-v3-uDB"/>

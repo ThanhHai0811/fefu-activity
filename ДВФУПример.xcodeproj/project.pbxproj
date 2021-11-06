@@ -13,6 +13,8 @@
 		0421EA68272C1621007BDA5D /* DetailVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0421EA66272C1621007BDA5D /* DetailVCViewController.xib */; };
 		046C36882726A6E800453CB7 /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C36862726A6E800453CB7 /* ActivityDetailsViewController.swift */; };
 		046C36892726A6E800453CB7 /* ActivityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046C36872726A6E800453CB7 /* ActivityDetailsViewController.xib */; };
+		04868E6227365B29007FFFD2 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04868E6027365B29007FFFD2 /* NewActivityViewController.swift */; };
+		04868E6327365B29007FFFD2 /* NewActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04868E6127365B29007FFFD2 /* NewActivityViewController.xib */; };
 		0488FA3E270E045F00A5EE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA3D270E045F00A5EE20 /* AppDelegate.swift */; };
 		0488FA40270E045F00A5EE20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA3F270E045F00A5EE20 /* SceneDelegate.swift */; };
 		0488FA42270E045F00A5EE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA41270E045F00A5EE20 /* ViewController.swift */; };
@@ -62,6 +64,8 @@
 		0421EA66272C1621007BDA5D /* DetailVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVCViewController.xib; sourceTree = "<group>"; };
 		046C36862726A6E800453CB7 /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		046C36872726A6E800453CB7 /* ActivityDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityDetailsViewController.xib; sourceTree = "<group>"; };
+		04868E6027365B29007FFFD2 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
+		04868E6127365B29007FFFD2 /* NewActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewActivityViewController.xib; sourceTree = "<group>"; };
 		0488FA3A270E045F00A5EE20 /* ДВФУПример.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ДВФУПример.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0488FA3D270E045F00A5EE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0488FA3F270E045F00A5EE20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04868E5F27365AD1007FFFD2 /* NewActivity */ = {
+			isa = PBXGroup;
+			children = (
+				04868E6027365B29007FFFD2 /* NewActivityViewController.swift */,
+				04868E6127365B29007FFFD2 /* NewActivityViewController.xib */,
+			);
+			path = NewActivity;
+			sourceTree = "<group>";
+		};
 		0488FA31270E045F00A5EE20 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +165,7 @@
 				0488FA72270E959600A5EE20 /* MH2ViewController.xib */,
 				0488FA48270E046100A5EE20 /* LaunchScreen.storyboard */,
 				049748D5272636B5000B17CF /* 16_10 */,
+				04868E5F27365AD1007FFFD2 /* NewActivity */,
 				0488FA4B270E046100A5EE20 /* Info.plist */,
 				048C8B8D272591DD00B83068 /* fefuactivity.xcdatamodeld */,
 			);
@@ -325,6 +339,7 @@
 				04CBF82F271BA5AE001B33C8 /* Assets.xcassets in Resources */,
 				04FF7D9827283EB000FB9F1F /* StartActivityViewController.xib in Resources */,
 				04A13F20271B6E49009E73C6 /* 1ACTIVITY.png in Resources */,
+				04868E6327365B29007FFFD2 /* NewActivityViewController.xib in Resources */,
 				0488FA45270E045F00A5EE20 /* Main.storyboard in Resources */,
 				04A13F1D271B6A26009E73C6 /* Group 10.png in Resources */,
 				0421EA68272C1621007BDA5D /* DetailVCViewController.xib in Resources */,
@@ -365,6 +380,7 @@
 				04FF7D9B2728434800FB9F1F /* FEFUCoreDataContainer.swift in Sources */,
 				0488FA73270E959600A5EE20 /* MH2ViewController.swift in Sources */,
 				049748DC272636F0000B17CF /* ProfileViewController.swift in Sources */,
+				04868E6227365B29007FFFD2 /* NewActivityViewController.swift in Sources */,
 				04FF7D9727283EB000FB9F1F /* StartActivityViewController.swift in Sources */,
 				0488FA3E270E045F00A5EE20 /* AppDelegate.swift in Sources */,
 				0488FA40270E045F00A5EE20 /* SceneDelegate.swift in Sources */,
