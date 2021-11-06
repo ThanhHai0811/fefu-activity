@@ -33,6 +33,7 @@ class DetailVCViewController: UIViewController {
         VehicleLabel.text = self.vehiclelabel
         Time4Label.text = self.time4label
         Time5Label.text = self.time5label
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .done, target: self, action: nil)
         commonInit1()
     }
     private func commonInit1(){
