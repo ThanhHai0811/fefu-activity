@@ -8,7 +8,9 @@
 import UIKit
 
 class ActivityDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    @IBOutlet weak var emtyStateView: UIView!
+    @IBOutlet weak var StateTitle: UILabel!
+    @IBOutlet weak var StateDescription: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var StartButton: UIButton!
     let ArrayDay = ["Вчера","Май 2022 года"]
@@ -18,10 +20,14 @@ class ActivityDetailsViewController: UIViewController, UITableViewDelegate, UITa
     let ArrayTime2 = ["14 часов назад","14 часов назад"]
     let ArrayTime3 = ["1 ч 42 мин","11 ч 42 мин"]
     let ArrayTime4 = ["Старт 14:49 · Финиш 16:31","Старт 14:49 · Финиш 16:31"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Активности"
+        StateTitle.text = "Время потренить"
+        StateDescription.text = "Нажимай на кнопку ниже и начинаем трекать активность"
+        StartButton.setTitle("Старт", for: .normal)
+        StartButton.titleLabel?.font = .boldSystemFont(ofSize: 17)
         StartButton.setTitle("Старт", for: .normal)
         StartButton.titleLabel?.font = .boldSystemFont(ofSize: 17)
         tableView.dataSource = self
@@ -32,10 +38,14 @@ class ActivityDetailsViewController: UIViewController, UITableViewDelegate, UITa
         tableView.register(nidName, forCellReuseIdentifier: "table1ViewCell")
         commonInit1()
     }
+    @IBAction func DidTapButton(_ sender: Any) {
+        emtyStateView.isHidden = true
+        tableView.isHidden = false
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ArrayDay.count
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "table1ViewCell", for: indexPath) as! Table1ViewCell
         cell.commonInit(ArrayDay[indexPath.item], km:ArrayKm[indexPath.item], time1: ArrayTime1[indexPath.item], vehicle: ArrayVehicle[indexPath.item], time2: ArrayTime2[indexPath.item])
         return cell
@@ -52,3 +62,5 @@ class ActivityDetailsViewController: UIViewController, UITableViewDelegate, UITa
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
+

@@ -26,8 +26,6 @@
 		048C8B8727258CAD00B83068 /* Group 49.png in Resources */ = {isa = PBXBuildFile; fileRef = 048C8B8627258CAD00B83068 /* Group 49.png */; };
 		048C8B8C2725904500B83068 /* FEFUUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C8B8B2725904500B83068 /* FEFUUserDefaults.swift */; };
 		048C8B8F272591DD00B83068 /* fefuactivity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 048C8B8D272591DD00B83068 /* fefuactivity.xcdatamodeld */; };
-		049748D8272636D3000B17CF /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049748D6272636D3000B17CF /* ActivityViewController.swift */; };
-		049748D9272636D3000B17CF /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049748D7272636D3000B17CF /* ActivityViewController.xib */; };
 		049748DC272636F0000B17CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049748DA272636F0000B17CF /* ProfileViewController.swift */; };
 		049748DD272636F0000B17CF /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049748DB272636F0000B17CF /* ProfileViewController.xib */; };
 		04A13F19271B6588009E73C6 /* ACTIVITY.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A13F16271B6588009E73C6 /* ACTIVITY.png */; };
@@ -81,8 +79,6 @@
 		048C8B8627258CAD00B83068 /* Group 49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 49.png"; sourceTree = "<group>"; };
 		048C8B8B2725904500B83068 /* FEFUUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEFUUserDefaults.swift; sourceTree = "<group>"; };
 		048C8B8E272591DD00B83068 /* fefuactivity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fefuactivity.xcdatamodel; sourceTree = "<group>"; };
-		049748D6272636D3000B17CF /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
-		049748D7272636D3000B17CF /* ActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityViewController.xib; sourceTree = "<group>"; };
 		049748DA272636F0000B17CF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		049748DB272636F0000B17CF /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		04A13F16271B6588009E73C6 /* ACTIVITY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ACTIVITY.png; sourceTree = "<group>"; };
@@ -186,8 +182,6 @@
 		049748D5272636B5000B17CF /* 16_10 */ = {
 			isa = PBXGroup;
 			children = (
-				049748D6272636D3000B17CF /* ActivityViewController.swift */,
-				049748D7272636D3000B17CF /* ActivityViewController.xib */,
 				046C36862726A6E800453CB7 /* ActivityDetailsViewController.swift */,
 				046C36872726A6E800453CB7 /* ActivityDetailsViewController.xib */,
 				0421EA5F272A516D007BDA5D /* Table1ViewCell.swift */,
@@ -326,7 +320,6 @@
 				04A13F21271B6E49009E73C6 /* Group 17.png in Resources */,
 				049748DD272636F0000B17CF /* ProfileViewController.xib in Resources */,
 				046C36892726A6E800453CB7 /* ActivityDetailsViewController.xib in Resources */,
-				049748D9272636D3000B17CF /* ActivityViewController.xib in Resources */,
 				0488FA78270EA1C400A5EE20 /* MH3ViewController.xib in Resources */,
 				0421EA62272A516D007BDA5D /* Table1ViewCell.xib in Resources */,
 				04CBF82F271BA5AE001B33C8 /* Assets.xcassets in Resources */,
@@ -368,7 +361,6 @@
 				0488FA77270EA1C400A5EE20 /* MH3ViewController.swift in Sources */,
 				0421EA67272C1621007BDA5D /* DetailVCViewController.swift in Sources */,
 				048C8B8C2725904500B83068 /* FEFUUserDefaults.swift in Sources */,
-				049748D8272636D3000B17CF /* ActivityViewController.swift in Sources */,
 				048C8B8F272591DD00B83068 /* fefuactivity.xcdatamodeld in Sources */,
 				04FF7D9B2728434800FB9F1F /* FEFUCoreDataContainer.swift in Sources */,
 				0488FA73270E959600A5EE20 /* MH2ViewController.swift in Sources */,

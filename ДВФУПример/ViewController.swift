@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     private func createTabBarController(){
         let tabBarController = UITabBarController(nibName: nil, bundle: nil)
-        let activityNavitgation = UINavigationController(rootViewController: ActivityViewController())
+        let activityNavitgation = UINavigationController(rootViewController: ActivityDetailsViewController())
         activityNavitgation.title = "Активности"
         let profileNavigation = UINavigationController(rootViewController: ProfileViewController())
         profileNavigation.title = "Профиль"
