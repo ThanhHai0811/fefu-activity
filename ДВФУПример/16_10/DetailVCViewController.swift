@@ -11,7 +11,6 @@ class DetailVCViewController: UIViewController {
     @IBOutlet weak var Image: UIImageView!
     @IBOutlet weak var kmLabel: UILabel!
     @IBOutlet weak var Time2Label: UILabel!
-    @IBOutlet weak var StartButton: UIButton!
     @IBOutlet weak var Time3Label: UILabel!
     @IBOutlet weak var VehicleLabel: UILabel!
     @IBOutlet weak var Time4Label: UILabel!

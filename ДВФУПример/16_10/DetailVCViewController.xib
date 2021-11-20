@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVCViewController" customModule="ДВФУПример" customModuleProvider="target">
             <connections>
                 <outlet property="Image" destination="RnO-cQ-ybh" id="gFO-Tf-RVx"/>
-                <outlet property="StartButton" destination="mVl-pP-KOn" id="NVH-4w-a0o"/>
                 <outlet property="Time2Label" destination="hWY-A5-NwP" id="0RN-1h-TIy"/>
                 <outlet property="Time3Label" destination="KFY-dX-NtO" id="r5X-fM-ckd"/>
                 <outlet property="Time4Label" destination="Zes-La-14x" id="Ynf-kd-u31"/>
@@ -93,14 +92,6 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVl-pP-KOn">
-                    <rect key="frame" x="32" y="791" width="350" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="dDk-7T-lAw"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Комментарий" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ogj-Ej-n4a">
                     <rect key="frame" x="32" y="261" width="350" height="44"/>
                     <constraints>
@@ -122,16 +113,13 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cPZ-xC-AtJ" secondAttribute="trailing" constant="32" id="MRn-FI-RTb"/>
                 <constraint firstItem="gMK-qT-FoO" firstAttribute="top" secondItem="Zes-La-14x" secondAttribute="bottom" constant="24" id="NCA-eF-0zA"/>
                 <constraint firstItem="hWY-A5-NwP" firstAttribute="top" secondItem="g87-ej-jWy" secondAttribute="bottom" constant="1" id="QgZ-3f-H5U"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mVl-pP-KOn" secondAttribute="trailing" constant="32" id="Qm3-NB-GFn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ogj-Ej-n4a" secondAttribute="trailing" constant="32" id="SYL-WV-joo"/>
                 <constraint firstItem="cPZ-xC-AtJ" firstAttribute="top" secondItem="Zes-La-14x" secondAttribute="bottom" constant="24" id="Tnu-Q6-Vul"/>
                 <constraint firstItem="g87-ej-jWy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="UN0-cF-XmN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mVl-pP-KOn" secondAttribute="bottom" constant="21" id="d8J-qT-YuD"/>
                 <constraint firstItem="hWY-A5-NwP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="gFy-qm-4xj"/>
                 <constraint firstItem="Zes-La-14x" firstAttribute="top" secondItem="KFY-dX-NtO" secondAttribute="bottom" constant="1" id="kiH-dY-lAY"/>
                 <constraint firstItem="g87-ej-jWy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="mvx-5Q-dwO"/>
                 <constraint firstItem="RnO-cQ-ybh" firstAttribute="top" secondItem="Zes-La-14x" secondAttribute="bottom" constant="24" id="oag-YO-0HJ"/>
-                <constraint firstItem="mVl-pP-KOn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="sA9-Hd-I6s"/>
                 <constraint firstItem="Ogj-Ej-n4a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="t40-qr-oO8"/>
             </constraints>
             <point key="canvasLocation" x="132" y="80"/>

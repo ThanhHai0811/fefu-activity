@@ -2,28 +2,104 @@
 //  NewActivityViewController.swift
 //  ДВФУПример
 //
-//  Created by Фам Тхань Хай on 06/11/2021.
+//  Created by Фам Тхань Хай on 18/11/2021.
 //
 
 import UIKit
 
-class NewActivityViewController: UIViewController {
-
+import UIKit
+import CoreLocation
+import MapKit
+class NewActivityViewController: UIViewController{
+    
+    let CoreDataActivity = FEFUCoreDataContainer.instance
+    
+    @IBOutlet weak var mapView: MKMapView!
+    private let locationManager: CLLocationManager = {
+        let manager = CLLocationManager()
+        manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        return manager
+    }()
+    
+    var userLocation: CLLocation? {
+        didSet {
+            guard let userLocation = userLocation else {
+                return
+            }
+            let region = MKCoordinateRegion(
+                        center:userLocation.coordinate,
+                        latitudinalMeters: 500,
+                        longitudinalMeters: 500
+                )
+            mapView.setRegion(region, animated: true)
+            userLocationHistory.append(userLocation)
+        }
+    }
+    
+    fileprivate var userLocationHistory: [CLLocation] = []{
+        didSet {
+            let coordinates = userLocationHistory.map { $0.coordinate }
+            
+            let route = MKPolyline(coordinates: coordinates, count: coordinates.count)
+            route.title = "Ваш маршрут"
+            mapView.addOverlay(route)
+            
+        }
+    }
+    func getUserLocationHistory() -> [CLLocation] {
+        return userLocationHistory
+    }
+    let userLocationIdentifier = "ic_user_location"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        mapView.showsUserLocation = true
+        mapView.delegate = self
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func SaveActivityData(_ sender: Any) {
+        let activity_data_for_saving = userLocationHistory.description
+        let core_data = CDUserActivitys(context: CoreDataActivity.context)
+        core_data.locationData = activity_data_for_saving;
+        CoreDataActivity.saveContext()
     }
-    */
+}
+extension NewActivityViewController: CLLocationManagerDelegate{
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+        guard let currentLocation = locations.first else {
+            return
+        }
+        userLocation = currentLocation
+    }
+}
 
+extension NewActivityViewController: MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay)->MKOverlayRenderer{
+        if let polyline = overlay as? MKPolyline {
+            let render = MKPolylineRenderer(polyline: polyline)
+            render.fillColor = UIColor.blue
+            render.strokeColor = UIColor.blue
+            render.lineWidth = 5
+            return render
+        }
+        return MKOverlayRenderer(overlay: overlay)
+    }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? MKUserLocation {
+            
+            let dequeView = mapView.dequeueReusableAnnotationView(withIdentifier: userLocationIdentifier)
+            
+            let view = dequeView ?? MKAnnotationView(
+                annotation: annotation, reuseIdentifier: userLocationIdentifier
+            )
+            view.image = UIImage(named: "ic_user_location")
+            return view
+        }
+        return nil
+    }
 }
