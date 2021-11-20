@@ -5,7 +5,6 @@
 //  Created by Фам Тхань Хай on 18/11/2021.
 //
 
-import UIKit
 
 import UIKit
 import CoreLocation
