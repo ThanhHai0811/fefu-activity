@@ -8,43 +8,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var SignUp: UIButton!
-    @IBOutlet weak var SignIn: UIButton!
+    
+    @IBOutlet weak var signUpButton: ActivityFEFUButton!
+    
+    
+    @IBOutlet weak var alreadyExistButton: UIButton!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        SignUp.setTitle("Зарегистрироваться", for: .normal)
-        SignIn.setTitle("Уже есть аккаунт?", for: .normal)
-        
+            
+        signUpButton.setTitle("Зарегистрироваться", for: .normal)
+        alreadyExistButton.setTitle( "Уже есть аккаунт?", for: .normal)
     }
+    
     override func viewDidAppear(_ animated: Bool) {
-        SignUp.titleLabel?.font = .boldSystemFont(ofSize: 16)
-        SignIn.titleLabel?.font = .boldSystemFont(ofSize: 16)
-        createTabBarController()
+        super.viewDidAppear(animated)
+        
+        present(TabsViewController(nibName: "TabsViewController", bundle: nil), animated: true, completion: nil)
+        
+        signUpButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        alreadyExistButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
     }
 
-    @IBAction func SignUpTap(_ sender: Any) {
-        let SignUpView = storyboard?.instantiateViewController(withIdentifier: "Screen2") as! MH2ViewController
-        navigationController?.pushViewController(SignUpView, animated: true)
+
+    @IBAction func signUpButtonTap(_ sender: Any) {
+        let signUpView = MH2ViewController(nibName: "MH2ViewController", bundle: nil)
+        navigationController?.pushViewController(signUpView, animated: true)
     }
-    @IBAction func SignInTap(_ sender: Any) {
-        let SignInView = storyboard?.instantiateViewController(withIdentifier: "Screen3") as! MH3ViewController
-        navigationController?.pushViewController(SignInView, animated: true)
-    }
-    private func createTabBarController(){
-        let tabBarController = UITabBarController(nibName: nil, bundle: nil)
-        let activityNavitgation = UINavigationController(rootViewController: ActivityDetailsViewController())
-        activityNavitgation.title = "Активности"
-        let profileNavigation = UINavigationController(rootViewController: ProfileViewController())
-        profileNavigation.title = "Профиль"
-        tabBarController.setViewControllers([activityNavitgation, profileNavigation], animated: true)
-        tabBarController.modalPresentationStyle = .fullScreen
-        guard let iteams = tabBarController.tabBar.items else {
-            return
-        }
-        for iteam in iteams {
-            iteam.image = UIImage(systemName: "circlebadge")
-        }
-        present(tabBarController, animated: true, completion: nil)
+    
+    @IBAction func alreadyExistButtonTap(_ sender: Any) {
+        let signInView = MH3ViewController(nibName: "MH3ViewController", bundle: nil)
+        navigationController?.pushViewController(signInView, animated: true)
     }
 }

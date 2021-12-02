@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0416FB142756428600CC2355 /* SecureFEFUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416FB132756428600CC2355 /* SecureFEFUTextField.swift */; };
 		0421EA61272A516D007BDA5D /* Table1ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421EA5F272A516D007BDA5D /* Table1ViewCell.swift */; };
 		0421EA62272A516D007BDA5D /* Table1ViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0421EA60272A516D007BDA5D /* Table1ViewCell.xib */; };
 		0421EA67272C1621007BDA5D /* DetailVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421EA65272C1621007BDA5D /* DetailVCViewController.swift */; };
 		0421EA68272C1621007BDA5D /* DetailVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0421EA66272C1621007BDA5D /* DetailVCViewController.xib */; };
+		0423A63B2755323400A17595 /* SignFEFUTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423A63A2755323400A17595 /* SignFEFUTextField.swift */; };
+		0423A63E2755346600A17595 /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423A63C2755346600A17595 /* TabsViewController.swift */; };
+		0423A63F2755346600A17595 /* TabsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0423A63D2755346600A17595 /* TabsViewController.xib */; };
+		044AEAED27566FF100696E1A /* StartActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AEAEB27566FF100696E1A /* StartActivityViewController.swift */; };
+		044AEAEE27566FF100696E1A /* StartActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044AEAEC27566FF100696E1A /* StartActivityViewController.xib */; };
+		044AEAF5275679C400696E1A /* ActivityTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044AEAF3275679C400696E1A /* ActivityTypeCollectionViewCell.swift */; };
+		044AEAF6275679C400696E1A /* ActivityTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044AEAF4275679C400696E1A /* ActivityTypeCollectionViewCell.xib */; };
 		046C36882726A6E800453CB7 /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046C36862726A6E800453CB7 /* ActivityDetailsViewController.swift */; };
 		046C36892726A6E800453CB7 /* ActivityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046C36872726A6E800453CB7 /* ActivityDetailsViewController.xib */; };
 		0488FA3E270E045F00A5EE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA3D270E045F00A5EE20 /* AppDelegate.swift */; };
@@ -22,23 +30,14 @@
 		0488FA74270E959600A5EE20 /* MH2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA72270E959600A5EE20 /* MH2ViewController.xib */; };
 		0488FA77270EA1C400A5EE20 /* MH3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA75270EA1C400A5EE20 /* MH3ViewController.swift */; };
 		0488FA78270EA1C400A5EE20 /* MH3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA76270EA1C400A5EE20 /* MH3ViewController.xib */; };
-		0488FA7B270EA4A300A5EE20 /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA7A270EA4A300A5EE20 /* people.png */; };
-		048C8B8727258CAD00B83068 /* Group 49.png in Resources */ = {isa = PBXBuildFile; fileRef = 048C8B8627258CAD00B83068 /* Group 49.png */; };
-		048C8B8C2725904500B83068 /* FEFUUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C8B8B2725904500B83068 /* FEFUUserDefaults.swift */; };
 		048C8B8F272591DD00B83068 /* fefuactivity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 048C8B8D272591DD00B83068 /* fefuactivity.xcdatamodeld */; };
 		049748DC272636F0000B17CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049748DA272636F0000B17CF /* ProfileViewController.swift */; };
 		049748DD272636F0000B17CF /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049748DB272636F0000B17CF /* ProfileViewController.xib */; };
-		04A13F19271B6588009E73C6 /* ACTIVITY.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A13F16271B6588009E73C6 /* ACTIVITY.png */; };
-		04A13F1D271B6A26009E73C6 /* Group 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A13F1C271B6A26009E73C6 /* Group 10.png */; };
-		04A13F20271B6E49009E73C6 /* 1ACTIVITY.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A13F1E271B6E49009E73C6 /* 1ACTIVITY.png */; };
-		04A13F21271B6E49009E73C6 /* Group 17.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A13F1F271B6E49009E73C6 /* Group 17.png */; };
 		04CBF82F271BA5AE001B33C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CBF82E271BA5AD001B33C8 /* Assets.xcassets */; };
-		04E516F327463D2C0056D4D1 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E516F127463D2C0056D4D1 /* NewActivityViewController.swift */; };
-		04E516F427463D2C0056D4D1 /* NewActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E516F227463D2C0056D4D1 /* NewActivityViewController.xib */; };
-		04F70A2E27469417005C698A /* CDUserActivitys+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F70A2D27469417005C698A /* CDUserActivitys+CoreDataClass.swift */; };
-		04F70A3027469440005C698A /* CDUserActivitys+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F70A2F27469440005C698A /* CDUserActivitys+CoreDataProperties.swift */; };
-		04FF7D9727283EB000FB9F1F /* StartActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7D9527283EB000FB9F1F /* StartActivityViewController.swift */; };
-		04FF7D9827283EB000FB9F1F /* StartActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FF7D9627283EB000FB9F1F /* StartActivityViewController.xib */; };
+		04CCB49D2755126C00ACEA5D /* ActivityFEFUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB49C2755126C00ACEA5D /* ActivityFEFUButton.swift */; };
+		04CCB49F2755129300ACEA5D /* StartActivityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB49E2755129300ACEA5D /* StartActivityButton.swift */; };
+		04CCB4A1275512B000ACEA5D /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB4A0275512B000ACEA5D /* PauseButton.swift */; };
+		04CCB4A3275512D100ACEA5D /* FinishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB4A2275512D100ACEA5D /* FinishButton.swift */; };
 		04FF7D9B2728434800FB9F1F /* FEFUCoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7D9A2728434800FB9F1F /* FEFUCoreDataContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,10 +59,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0416FB132756428600CC2355 /* SecureFEFUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFEFUTextField.swift; sourceTree = "<group>"; };
 		0421EA5F272A516D007BDA5D /* Table1ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table1ViewCell.swift; sourceTree = "<group>"; };
 		0421EA60272A516D007BDA5D /* Table1ViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Table1ViewCell.xib; sourceTree = "<group>"; };
 		0421EA65272C1621007BDA5D /* DetailVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVCViewController.swift; sourceTree = "<group>"; };
 		0421EA66272C1621007BDA5D /* DetailVCViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVCViewController.xib; sourceTree = "<group>"; };
+		0423A63A2755323400A17595 /* SignFEFUTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignFEFUTextField.swift; sourceTree = "<group>"; };
+		0423A63C2755346600A17595 /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
+		0423A63D2755346600A17595 /* TabsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabsViewController.xib; sourceTree = "<group>"; };
+		044AEAEB27566FF100696E1A /* StartActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartActivityViewController.swift; sourceTree = "<group>"; };
+		044AEAEC27566FF100696E1A /* StartActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartActivityViewController.xib; sourceTree = "<group>"; };
+		044AEAF3275679C400696E1A /* ActivityTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		044AEAF4275679C400696E1A /* ActivityTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTypeCollectionViewCell.xib; sourceTree = "<group>"; };
 		046C36862726A6E800453CB7 /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		046C36872726A6E800453CB7 /* ActivityDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityDetailsViewController.xib; sourceTree = "<group>"; };
 		0488FA3A270E045F00A5EE20 /* ДВФУПример.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ДВФУПример.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,23 +86,14 @@
 		0488FA72270E959600A5EE20 /* MH2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MH2ViewController.xib; sourceTree = "<group>"; };
 		0488FA75270EA1C400A5EE20 /* MH3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH3ViewController.swift; sourceTree = "<group>"; };
 		0488FA76270EA1C400A5EE20 /* MH3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MH3ViewController.xib; sourceTree = "<group>"; };
-		0488FA7A270EA4A300A5EE20 /* people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people.png; sourceTree = "<group>"; };
-		048C8B8627258CAD00B83068 /* Group 49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 49.png"; sourceTree = "<group>"; };
-		048C8B8B2725904500B83068 /* FEFUUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEFUUserDefaults.swift; sourceTree = "<group>"; };
 		048C8B8E272591DD00B83068 /* fefuactivity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fefuactivity.xcdatamodel; sourceTree = "<group>"; };
 		049748DA272636F0000B17CF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		049748DB272636F0000B17CF /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		04A13F16271B6588009E73C6 /* ACTIVITY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ACTIVITY.png; sourceTree = "<group>"; };
-		04A13F1C271B6A26009E73C6 /* Group 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 10.png"; sourceTree = "<group>"; };
-		04A13F1E271B6E49009E73C6 /* 1ACTIVITY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1ACTIVITY.png; sourceTree = "<group>"; };
-		04A13F1F271B6E49009E73C6 /* Group 17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 17.png"; sourceTree = "<group>"; };
 		04CBF82E271BA5AD001B33C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04E516F127463D2C0056D4D1 /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
-		04E516F227463D2C0056D4D1 /* NewActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewActivityViewController.xib; sourceTree = "<group>"; };
-		04F70A2D27469417005C698A /* CDUserActivitys+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDUserActivitys+CoreDataClass.swift"; sourceTree = "<group>"; };
-		04F70A2F27469440005C698A /* CDUserActivitys+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDUserActivitys+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		04FF7D9527283EB000FB9F1F /* StartActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartActivityViewController.swift; sourceTree = "<group>"; };
-		04FF7D9627283EB000FB9F1F /* StartActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartActivityViewController.xib; sourceTree = "<group>"; };
+		04CCB49C2755126C00ACEA5D /* ActivityFEFUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFEFUButton.swift; sourceTree = "<group>"; };
+		04CCB49E2755129300ACEA5D /* StartActivityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartActivityButton.swift; sourceTree = "<group>"; };
+		04CCB4A0275512B000ACEA5D /* PauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
+		04CCB4A2275512D100ACEA5D /* FinishButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishButton.swift; sourceTree = "<group>"; };
 		04FF7D9A2728434800FB9F1F /* FEFUCoreDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEFUCoreDataContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,11 +122,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0423A638275531E500A17595 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				0423A63A2755323400A17595 /* SignFEFUTextField.swift */,
+				0416FB132756428600CC2355 /* SecureFEFUTextField.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		04868E5F27365AD1007FFFD2 /* NewActivity */ = {
 			isa = PBXGroup;
 			children = (
-				04E516F127463D2C0056D4D1 /* NewActivityViewController.swift */,
-				04E516F227463D2C0056D4D1 /* NewActivityViewController.xib */,
+				04CCB499275511D400ACEA5D /* Buttons */,
+				044AEAEB27566FF100696E1A /* StartActivityViewController.swift */,
+				044AEAEC27566FF100696E1A /* StartActivityViewController.xib */,
+				044AEAF3275679C400696E1A /* ActivityTypeCollectionViewCell.swift */,
+				044AEAF4275679C400696E1A /* ActivityTypeCollectionViewCell.xib */,
 			);
 			path = NewActivity;
 			sourceTree = "<group>";
@@ -154,12 +164,10 @@
 		0488FA3C270E045F00A5EE20 /* ДВФУПример */ = {
 			isa = PBXGroup;
 			children = (
+				0423A638275531E500A17595 /* TextField */,
 				04EA2192273FA3FA00677886 /* Homework1 */,
 				04FF7D9927283F1000FB9F1F /* CoreData+Helpers */,
-				04FF7D9427283E8000FB9F1F /* StartActivityController */,
-				048C8B8A27258FF600B83068 /* UserDefaults+Helpers */,
 				04CBF82E271BA5AD001B33C8 /* Assets.xcassets */,
-				0488FA79270EA49600A5EE20 /* Image */,
 				0488FA3D270E045F00A5EE20 /* AppDelegate.swift */,
 				0488FA43270E045F00A5EE20 /* Main.storyboard */,
 				0488FA3F270E045F00A5EE20 /* SceneDelegate.swift */,
@@ -173,27 +181,6 @@
 			path = "ДВФУПример";
 			sourceTree = "<group>";
 		};
-		0488FA79270EA49600A5EE20 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				048C8B8627258CAD00B83068 /* Group 49.png */,
-				04A13F1E271B6E49009E73C6 /* 1ACTIVITY.png */,
-				04A13F1F271B6E49009E73C6 /* Group 17.png */,
-				04A13F1C271B6A26009E73C6 /* Group 10.png */,
-				04A13F16271B6588009E73C6 /* ACTIVITY.png */,
-				0488FA7A270EA4A300A5EE20 /* people.png */,
-			);
-			path = Image;
-			sourceTree = "<group>";
-		};
-		048C8B8A27258FF600B83068 /* UserDefaults+Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				048C8B8B2725904500B83068 /* FEFUUserDefaults.swift */,
-			);
-			path = "UserDefaults+Helpers";
-			sourceTree = "<group>";
-		};
 		049748D5272636B5000B17CF /* 16_10 */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,8 +192,21 @@
 				0421EA66272C1621007BDA5D /* DetailVCViewController.xib */,
 				049748DA272636F0000B17CF /* ProfileViewController.swift */,
 				049748DB272636F0000B17CF /* ProfileViewController.xib */,
+				0423A63C2755346600A17595 /* TabsViewController.swift */,
+				0423A63D2755346600A17595 /* TabsViewController.xib */,
 			);
 			path = 16_10;
+			sourceTree = "<group>";
+		};
+		04CCB499275511D400ACEA5D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				04CCB49C2755126C00ACEA5D /* ActivityFEFUButton.swift */,
+				04CCB49E2755129300ACEA5D /* StartActivityButton.swift */,
+				04CCB4A0275512B000ACEA5D /* PauseButton.swift */,
+				04CCB4A2275512D100ACEA5D /* FinishButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		04EA2192273FA3FA00677886 /* Homework1 */ = {
@@ -220,21 +220,10 @@
 			path = Homework1;
 			sourceTree = "<group>";
 		};
-		04FF7D9427283E8000FB9F1F /* StartActivityController */ = {
-			isa = PBXGroup;
-			children = (
-				04FF7D9527283EB000FB9F1F /* StartActivityViewController.swift */,
-				04FF7D9627283EB000FB9F1F /* StartActivityViewController.xib */,
-			);
-			path = StartActivityController;
-			sourceTree = "<group>";
-		};
 		04FF7D9927283F1000FB9F1F /* CoreData+Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				04FF7D9A2728434800FB9F1F /* FEFUCoreDataContainer.swift */,
-				04F70A2D27469417005C698A /* CDUserActivitys+CoreDataClass.swift */,
-				04F70A2F27469440005C698A /* CDUserActivitys+CoreDataProperties.swift */,
 			);
 			path = "CoreData+Helpers";
 			sourceTree = "<group>";
@@ -343,23 +332,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0488FA7B270EA4A300A5EE20 /* people.png in Resources */,
+				0423A63F2755346600A17595 /* TabsViewController.xib in Resources */,
 				0488FA4A270E046100A5EE20 /* LaunchScreen.storyboard in Resources */,
-				04A13F21271B6E49009E73C6 /* Group 17.png in Resources */,
+				044AEAEE27566FF100696E1A /* StartActivityViewController.xib in Resources */,
 				049748DD272636F0000B17CF /* ProfileViewController.xib in Resources */,
 				046C36892726A6E800453CB7 /* ActivityDetailsViewController.xib in Resources */,
 				0488FA78270EA1C400A5EE20 /* MH3ViewController.xib in Resources */,
 				0421EA62272A516D007BDA5D /* Table1ViewCell.xib in Resources */,
 				04CBF82F271BA5AE001B33C8 /* Assets.xcassets in Resources */,
-				04FF7D9827283EB000FB9F1F /* StartActivityViewController.xib in Resources */,
-				04A13F20271B6E49009E73C6 /* 1ACTIVITY.png in Resources */,
-				04E516F427463D2C0056D4D1 /* NewActivityViewController.xib in Resources */,
 				0488FA45270E045F00A5EE20 /* Main.storyboard in Resources */,
-				04A13F1D271B6A26009E73C6 /* Group 10.png in Resources */,
+				044AEAF6275679C400696E1A /* ActivityTypeCollectionViewCell.xib in Resources */,
 				0421EA68272C1621007BDA5D /* DetailVCViewController.xib in Resources */,
-				048C8B8727258CAD00B83068 /* Group 49.png in Resources */,
 				0488FA74270E959600A5EE20 /* MH2ViewController.xib in Resources */,
-				04A13F19271B6588009E73C6 /* ACTIVITY.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,20 +370,24 @@
 			files = (
 				046C36882726A6E800453CB7 /* ActivityDetailsViewController.swift in Sources */,
 				0488FA42270E045F00A5EE20 /* ViewController.swift in Sources */,
+				0416FB142756428600CC2355 /* SecureFEFUTextField.swift in Sources */,
 				0421EA61272A516D007BDA5D /* Table1ViewCell.swift in Sources */,
 				0488FA77270EA1C400A5EE20 /* MH3ViewController.swift in Sources */,
-				04F70A3027469440005C698A /* CDUserActivitys+CoreDataProperties.swift in Sources */,
 				0421EA67272C1621007BDA5D /* DetailVCViewController.swift in Sources */,
-				048C8B8C2725904500B83068 /* FEFUUserDefaults.swift in Sources */,
+				0423A63E2755346600A17595 /* TabsViewController.swift in Sources */,
 				048C8B8F272591DD00B83068 /* fefuactivity.xcdatamodeld in Sources */,
-				04F70A2E27469417005C698A /* CDUserActivitys+CoreDataClass.swift in Sources */,
+				0423A63B2755323400A17595 /* SignFEFUTextField.swift in Sources */,
+				044AEAF5275679C400696E1A /* ActivityTypeCollectionViewCell.swift in Sources */,
 				04FF7D9B2728434800FB9F1F /* FEFUCoreDataContainer.swift in Sources */,
 				0488FA73270E959600A5EE20 /* MH2ViewController.swift in Sources */,
+				04CCB4A3275512D100ACEA5D /* FinishButton.swift in Sources */,
 				049748DC272636F0000B17CF /* ProfileViewController.swift in Sources */,
-				04E516F327463D2C0056D4D1 /* NewActivityViewController.swift in Sources */,
-				04FF7D9727283EB000FB9F1F /* StartActivityViewController.swift in Sources */,
+				04CCB49D2755126C00ACEA5D /* ActivityFEFUButton.swift in Sources */,
+				044AEAED27566FF100696E1A /* StartActivityViewController.swift in Sources */,
 				0488FA3E270E045F00A5EE20 /* AppDelegate.swift in Sources */,
 				0488FA40270E045F00A5EE20 /* SceneDelegate.swift in Sources */,
+				04CCB4A1275512B000ACEA5D /* PauseButton.swift in Sources */,
+				04CCB49F2755129300ACEA5D /* StartActivityButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,73 +1,160 @@
-//
-//  ActivityDetailsViewController.swift
-//  ДВФУПример
-//
-//  Created by Фам Тхань Хай on 25/10/2021.
-//
-
 import UIKit
+import CoreData
 
-class ActivityDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var emtyStateView: UIView!
-    @IBOutlet weak var StateTitle: UILabel!
-    @IBOutlet weak var StateDescription: UILabel!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var StartButton: UIButton!
-    @IBOutlet weak var StartButton1: UIButton!
-    let ArrayDay = ["Вчера","Май 2022 года"]
-    let ArrayKm = ["14.32 км","14.32 км"]
-    let ArrayTime1 = ["2 часа 46 минут","2 часа 46 минут"]
-    let ArrayVehicle = ["Велосипед","Велосипед"]
-    let ArrayTime2 = ["14 часов назад","14 часов назад"]
-    let ArrayTime3 = ["1 ч 42 мин","11 ч 42 мин"]
-    let ArrayTime4 = ["Старт 14:49 · Финиш 16:31","Старт 14:49 · Финиш 16:31"]
+struct ActivitiesTableViewModel {
+    let date: Date
+    let activities: [ActivityTableViewCellViewModel]
+}
 
+class ActivityDetailsViewController: UIViewController {
+    
+    private var data: [ActivitiesTableViewModel] = [ActivitiesTableViewModel]()
+    
+    @IBOutlet weak var startButton: ActivityFEFUButton!
+    @IBOutlet weak var emptyStateTitle: UILabel!
+    @IBOutlet weak var emptyStateDescription: UILabel!
+    @IBOutlet weak var emptyStateView: UIView!
+    
+    @IBOutlet weak var listOfActivities: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        commonInit()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetch()
+        self.listOfActivities.reloadData()
+    }
+    
+    private func fetch() {
+        let context = FEFUCoreDataContainer.instance.context
+        
+        let request = CDActivity.fetchRequest()
+        
+        do {
+            let rawActivities = try context.fetch(request)
+            let activitiesViewModels: [ActivityTableViewCellViewModel] = rawActivities.map { activity in
+                let image = UIImage(systemName: "bicycle.circle.fill") ?? UIImage()
+                return ActivityTableViewCellViewModel(distance: activity.distance,
+                                                      duration: activity.duration,
+                                                      activityType: activity.type ?? "",
+                                                      startDate: activity.date ?? Date(),
+                                                      icon: image,
+                                                      startTime: activity.startTime ?? "",
+                                                      endTime: activity.endTime ?? "")
+            }
+            
+            let groupedActivitiesByDate = Dictionary(grouping: activitiesViewModels) { activityVM in
+                return createDateComponents(activityVM.startDate)
+            }
+            
+            self.data = groupedActivitiesByDate.map { (key, values) in
+                return ActivitiesTableViewModel(date: key, activities: values)
+            }
+            
+
+        } catch {
+            print(error)
+        }
+        
+    }
+    
+    private func createDateComponents(_ activityDate: Date) -> Date {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: activityDate)
+        return calendar.date(from: components) ?? Date()
+    }
+    
+    private func commonInit() {
         self.title = "Активности"
-        StateTitle.text = "Время потренить"
-        StateDescription.text = "Нажимай на кнопку ниже и начинаем трекать активность"
-        StartButton.setTitle("Старт", for: .normal)
-        StartButton.titleLabel?.font = .boldSystemFont(ofSize: 17)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
-        let nidName = UINib(nibName: "Table1ViewCell", bundle: nil)
-        tableView.register(nidName, forCellReuseIdentifier: "table1ViewCell")
-        StartButton1.setTitle("Старт", for: .normal)
-        StartButton1.titleLabel?.font = .boldSystemFont(ofSize: 17)
-        commonInit1()
+        
+        startButton.setTitle("Старт", for: .normal)
+        startButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        
+        emptyStateTitle.text = "Время потренить"
+        emptyStateDescription.text = "Нажимай на кнопку ниже и начинаем трекать активность"
+        emptyStateView.backgroundColor = .clear
+        
+        listOfActivities.dataSource = self
+        listOfActivities.delegate = self
+        
+        listOfActivities.register(UINib(nibName: "Table1ViewCell", bundle: nil), forCellReuseIdentifier: "Table1ViewCell")
+        
+        listOfActivities.separatorStyle = .none
+        listOfActivities.backgroundColor = .clear
+        
+        emptyStateView.isHidden = self.data.isEmpty
+        listOfActivities.isHidden = !self.data.isEmpty
     }
-    @IBAction func DidTapButton(_ sender: Any) {
-        emtyStateView.isHidden = true
-        StartButton.isHidden = true
-        tableView.isHidden = false
-        StartButton1.isHidden = false
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ArrayDay.count
-    }
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "table1ViewCell", for: indexPath) as! Table1ViewCell
-        cell.commonInit(ArrayDay[indexPath.item], km:ArrayKm[indexPath.item], time1: ArrayTime1[indexPath.item], vehicle: ArrayVehicle[indexPath.item], time2: ArrayTime2[indexPath.item])
-        return cell
-    }
-    private func commonInit1(){
-        let backButton = UIBarButtonItem()
-        backButton.title = ""
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = DetailVCViewController(nibName: "DetailVCViewController", bundle: nil)
-        vc.commonInit2(ArrayVehicle[indexPath.item], image: "bicycle.circle.fill", km: ArrayKm[indexPath.item], time2: ArrayTime2[indexPath.item], time3: ArrayTime3[indexPath.item], vehicle: ArrayVehicle[indexPath.item], time4: ArrayTime4[indexPath.item], time5: ArrayTime2[indexPath.item])
-        self.navigationController?.pushViewController(vc, animated: true)
-        self.tableView.deselectRow(at: indexPath, animated: true)
-    }
-    @IBAction func DidTapStartButton1(_ sender: Any) {
-        let NewActivityView = NewActivityViewController(nibName: "NewActivityViewController", bundle: nil)
-        navigationController?.pushViewController(NewActivityView, animated: true)
+    
+    @IBAction func didStartActivity(_ sender: Any) {
+        let startActivityController = StartActivityViewController(nibName: "StartActivityViewController", bundle: nil)
+        
+        navigationController?.pushViewController(startActivityController, animated: true)
     }
 }
 
 
+
+extension ActivityDetailsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let DetailVCView = DetailVCViewController(nibName: "DetailVCViewController", bundle: nil)
+
+        let activity = self.data[indexPath.section].activities[indexPath.row]
+        DetailVCView.model = activity
+        
+        navigationController?.pushViewController(DetailVCView, animated: true)
+    }
+}
+
+
+
+extension ActivityDetailsViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UILabel()
+        header.font = .boldSystemFont(ofSize: 20)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let date = data[section].date
+        let sectionHeader = dateFormatter.string(from: date)
+        
+        header.text = sectionHeader
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data[section].activities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let activityData = self.data[indexPath.section].activities[indexPath.row]
+        
+        let dequeuedCell = listOfActivities.dequeueReusableCell(withIdentifier: "Table1ViewCell", for: indexPath)
+        
+        guard let upcastedCell = dequeuedCell as? Table1ViewCell else {
+            return UITableViewCell()
+        }
+        
+        upcastedCell.bind(activityData)
+        
+        return upcastedCell
+    }
+    
+    
+}
