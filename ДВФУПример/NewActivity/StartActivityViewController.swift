@@ -18,7 +18,7 @@ private let activitiesTypeData: [ActivityTypeCellViewModel] =
 [
     ActivityTypeCellViewModel(activityType: "Велосипед", activityTypeImage: image ?? UIImage(), titleForManageState: "На велике"),
     ActivityTypeCellViewModel(activityType: "Бег", activityTypeImage: image ?? UIImage(), titleForManageState: "Бежим"),
-    ActivityTypeCellViewModel(activityType: "Ходьба", activityTypeImage: image ?? UIImage(), titleForManageState: "Идем")
+    ActivityTypeCellViewModel(activityType: "Машина", activityTypeImage: image ?? UIImage(), titleForManageState: "На машине")
 ]
 
 class StartActivityViewController: UIViewController {
