@@ -30,24 +30,17 @@ class DetailVCViewController: UIViewController {
     }
     
     func bind(_ model: ActivityTableViewCellViewModel) {
-        let distanceStr = String(format: "%.2f км", model.distance / 1000)
-        distanceLabel.text = distanceStr
-    
-        let durationFormatter = DateComponentsFormatter()
-        durationFormatter.allowedUnits = [.hour, .minute, .second]
-        durationFormatter.zeroFormattingBehavior = .pad
-        activityDurationLabel.text = durationFormatter.string(from: model.duration)
+        distanceLabel.text = model.distance
+        
+        activityDurationLabel.text = model.duration
         
         startEndTimeLabel.text = "Cтарт: \(model.startTime) Финиш: \(model.endTime)"
         
         activityTitleLabel.text = model.activityType
         self.title = model.activityType
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        
-        dateLabel.text = dateFormatter.string(from: model.startDate)
-        secondTimeAgoLabel.text = dateFormatter.string(from: model.startDate)
+        dateLabel.text = model.startDate
+        secondTimeAgoLabel.text = model.startDate
         iconActivity.image = model.icon
     }
     

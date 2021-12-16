@@ -2,7 +2,7 @@ import UIKit
 import CoreData
 
 struct ActivitiesTableViewModel {
-    let date: Date
+    let date: String
     let activities: [ActivityTableViewCellViewModel]
 }
 
@@ -17,6 +17,8 @@ class ActivityDetailsViewController: UIViewController {
     
     @IBOutlet weak var listOfActivities: UITableView!
     
+    private let CDController: CDActivityController = CDActivityController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
@@ -29,36 +31,32 @@ class ActivityDetailsViewController: UIViewController {
     }
     
     private func fetch() {
-        let context = FEFUCoreDataContainer.instance.context
-        
-        let request = CDActivity.fetchRequest()
-        
         do {
-            let rawActivities = try context.fetch(request)
+            let rawActivities = try CDController.fetch()
             let activitiesViewModels: [ActivityTableViewCellViewModel] = rawActivities.map { activity in
-                let image = UIImage(systemName: "bicycle.circle.fill") ?? UIImage()
-                return ActivityTableViewCellViewModel(distance: activity.distance,
-                                                      duration: activity.duration,
-                                                      activityType: activity.type ?? "",
-                                                      startDate: activity.date ?? Date(),
-                                                      icon: image,
-                                                      startTime: activity.startTime ?? "",
-                                                      endTime: activity.endTime ?? "")
+            let image = UIImage(systemName: "bicycle.circle.fill") ?? UIImage()
+                
+            return ActivityTableViewCellViewModel(distance: activity.distance ?? "",
+                                         duration: activity.duration ?? "",
+                                         activityType: activity.type ?? "",
+                                         startDate: activity.date ?? "",
+                                         icon: image,
+                                         startTime: activity.startTime ?? "",
+                                         endTime: activity.endTime ?? "")
             }
             
             let groupedActivitiesByDate = Dictionary(grouping: activitiesViewModels) { activityVM in
-                return createDateComponents(activityVM.startDate)
+                return activityVM.startDate
             }
             
             self.data = groupedActivitiesByDate.map { (key, values) in
                 return ActivitiesTableViewModel(date: key, activities: values)
             }
             
-
+            
         } catch {
             print(error)
         }
-        
     }
     
     private func createDateComponents(_ activityDate: Date) -> Date {
@@ -128,12 +126,7 @@ extension ActivityDetailsViewController: UITableViewDataSource {
         let header = UILabel()
         header.font = .boldSystemFont(ofSize: 20)
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        let date = data[section].date
-        let sectionHeader = dateFormatter.string(from: date)
-        
-        header.text = sectionHeader
+        header.text = data[section].date
         return header
     }
     

@@ -38,6 +38,9 @@
 		04CCB49F2755129300ACEA5D /* StartActivityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB49E2755129300ACEA5D /* StartActivityButton.swift */; };
 		04CCB4A1275512B000ACEA5D /* PauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB4A0275512B000ACEA5D /* PauseButton.swift */; };
 		04CCB4A3275512D100ACEA5D /* FinishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB4A2275512D100ACEA5D /* FinishButton.swift */; };
+		04DF61AF276B7F77004F3EC7 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF61AE276B7F77004F3EC7 /* Auth.swift */; };
+		04DF61B1276B7FD2004F3EC7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF61B0276B7FD2004F3EC7 /* Models.swift */; };
+		04DF61B3276B8051004F3EC7 /* CDActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF61B2276B8051004F3EC7 /* CDActivityController.swift */; };
 		04FF7D9B2728434800FB9F1F /* FEFUCoreDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FF7D9A2728434800FB9F1F /* FEFUCoreDataContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +97,9 @@
 		04CCB49E2755129300ACEA5D /* StartActivityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartActivityButton.swift; sourceTree = "<group>"; };
 		04CCB4A0275512B000ACEA5D /* PauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseButton.swift; sourceTree = "<group>"; };
 		04CCB4A2275512D100ACEA5D /* FinishButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishButton.swift; sourceTree = "<group>"; };
+		04DF61AE276B7F77004F3EC7 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		04DF61B0276B7FD2004F3EC7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		04DF61B2276B8051004F3EC7 /* CDActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDActivityController.swift; sourceTree = "<group>"; };
 		04FF7D9A2728434800FB9F1F /* FEFUCoreDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FEFUCoreDataContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +170,7 @@
 		0488FA3C270E045F00A5EE20 /* ДВФУПример */ = {
 			isa = PBXGroup;
 			children = (
+				04DF61AD276B7F59004F3EC7 /* Api+Helpers */,
 				0423A638275531E500A17595 /* TextField */,
 				04EA2192273FA3FA00677886 /* Homework1 */,
 				04FF7D9927283F1000FB9F1F /* CoreData+Helpers */,
@@ -209,6 +216,15 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		04DF61AD276B7F59004F3EC7 /* Api+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				04DF61AE276B7F77004F3EC7 /* Auth.swift */,
+				04DF61B0276B7FD2004F3EC7 /* Models.swift */,
+			);
+			path = "Api+Helpers";
+			sourceTree = "<group>";
+		};
 		04EA2192273FA3FA00677886 /* Homework1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				04FF7D9A2728434800FB9F1F /* FEFUCoreDataContainer.swift */,
+				04DF61B2276B8051004F3EC7 /* CDActivityController.swift */,
 			);
 			path = "CoreData+Helpers";
 			sourceTree = "<group>";
@@ -377,8 +394,11 @@
 				0423A63E2755346600A17595 /* TabsViewController.swift in Sources */,
 				048C8B8F272591DD00B83068 /* fefuactivity.xcdatamodeld in Sources */,
 				0423A63B2755323400A17595 /* SignFEFUTextField.swift in Sources */,
+				04DF61B3276B8051004F3EC7 /* CDActivityController.swift in Sources */,
 				044AEAF5275679C400696E1A /* ActivityTypeCollectionViewCell.swift in Sources */,
 				04FF7D9B2728434800FB9F1F /* FEFUCoreDataContainer.swift in Sources */,
+				04DF61B1276B7FD2004F3EC7 /* Models.swift in Sources */,
+				04DF61AF276B7F77004F3EC7 /* Auth.swift in Sources */,
 				0488FA73270E959600A5EE20 /* MH2ViewController.swift in Sources */,
 				04CCB4A3275512D100ACEA5D /* FinishButton.swift in Sources */,
 				049748DC272636F0000B17CF /* ProfileViewController.swift in Sources */,
@@ -582,7 +602,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -612,7 +632,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -620,7 +640,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77CAWU6HZ4;
@@ -645,7 +664,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77CAWU6HZ4;

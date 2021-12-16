@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MH2ViewController" customModule="ДВФУПример" customModuleProvider="target">
             <connections>
+                <outlet property="LoginField" destination="aDf-7x-cJP" id="z5s-Kn-qaJ"/>
+                <outlet property="NameField" destination="ktG-jR-nh5" id="Xxm-Ou-qud"/>
+                <outlet property="PasswordConfirmField" destination="3ia-xM-t9l" id="4fi-Wh-K1G"/>
+                <outlet property="PasswordField" destination="dmG-s6-KTp" id="ldu-91-Wtz"/>
                 <outlet property="continueButton" destination="Lnp-5Y-pvT" id="LcO-Is-pnC"/>
                 <outlet property="genderPicker" destination="WOp-pU-pw7" id="QHA-Cc-TCo"/>
                 <outlet property="scrollView" destination="u7w-yn-csG" id="CoC-o2-FpM"/>
@@ -27,7 +31,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDW-Hg-5Uo">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDf-7x-cJP" customClass="SignFEFUTextField" customModule="fefuactivity" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDf-7x-cJP" customClass="SignFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
                                     <rect key="frame" x="17" y="0.0" width="380" height="53"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="53" id="DDX-Pa-3kb"/>
@@ -35,7 +39,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dmG-s6-KTp" customClass="SecureFEFUTextField" customModule="fefuactivity" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dmG-s6-KTp" customClass="SecureFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
                                     <rect key="frame" x="17" y="73" width="380" height="53"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="53" id="uJe-19-CLa"/>
@@ -43,7 +47,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Повторите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-xM-t9l" customClass="SecureFEFUTextField" customModule="fefuactivity" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Повторите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ia-xM-t9l" customClass="SecureFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
                                     <rect key="frame" x="17" y="146" width="380" height="53"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="53" id="xdx-kw-KvC"/>
@@ -51,7 +55,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя или никнейм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ktG-jR-nh5" customClass="SignFEFUTextField" customModule="fefuactivity" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя или никнейм" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ktG-jR-nh5" customClass="SignFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
                                     <rect key="frame" x="17" y="219" width="380" height="53"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="53" id="kx3-VZ-S0k"/>
@@ -59,7 +63,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пол" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOp-pU-pw7" customClass="SignFEFUTextField" customModule="fefuactivity" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пол" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WOp-pU-pw7" customClass="SignFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
                                     <rect key="frame" x="17" y="292" width="380" height="53"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="53" id="BB7-Sw-yqk"/>
@@ -67,7 +71,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnp-5Y-pvT" customClass="ActivityFEFUButton" customModule="fefuactivity" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnp-5Y-pvT" customClass="ActivityFEFUButton" customModule="ДВФУПример" customModuleProvider="target">
                                     <rect key="frame" x="40" y="373" width="334" height="56"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="Kf7-wm-4aG"/>
@@ -79,6 +83,9 @@
                                         </backgroundConfiguration>
                                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="DidTapContinueButton:" destination="-1" eventType="touchUpInside" id="HXz-T8-04o"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,7 +158,7 @@
     <resources>
         <image name="LogoBW" width="66" height="42"/>
         <namedColor name="ButtonBackgroundColor">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.2669999897480011" green="0.061999998986721039" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

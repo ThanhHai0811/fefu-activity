@@ -38,7 +38,7 @@ class StartActivityViewController: UIViewController {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     
-    private let coreDataContainer = FEFUCoreDataContainer.instance
+    private let CDController: CDActivityController = CDActivityController()
     private var previousRouteSegment: MKPolyline?
     private var currentDuration: TimeInterval = TimeInterval()
     private var startValueForTimer: Date?
@@ -48,6 +48,25 @@ class StartActivityViewController: UIViewController {
     private var activityDate: Date?
     private var activityDuration: TimeInterval = TimeInterval()
     private var activityType: String?
+    
+    private var timeFormatter: DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.zeroFormattingBehavior = .pad
+        return formatter
+    }()
+    
+    private var timeFormatterShort: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        return formatter
+    }()
+    
+    private var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
     
     private let locationManager: CLLocationManager = {
         let manager = CLLocationManager()
@@ -75,15 +94,18 @@ class StartActivityViewController: UIViewController {
         }
     }
     
+    // array for coordinates to update user route
     fileprivate var userLocationsHistory: [CLLocation] = [] {
         didSet {
             let coordinates = userLocationsHistory.map { $0.coordinate }
             
+            // if user paused tracking, previous polyline not deleted
             if let previousRoute = previousRouteSegment, !userLocationsHistory.isEmpty {
                 mapView.removeOverlay(previousRoute as MKOverlay)
                 previousRouteSegment = nil
             }
             
+            // if when user click pause we delete all of previous coordinates
             if userLocationsHistory.isEmpty {
                 previousRouteSegment = nil
             }
@@ -96,10 +118,12 @@ class StartActivityViewController: UIViewController {
             mapView.addOverlay(route)
         }
     }
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         
@@ -117,7 +141,7 @@ class StartActivityViewController: UIViewController {
         
         commonInit()
     }
-
+    
     private func commonInit() {
         statesContainer.backgroundColor = .clear
         activityStateInit()
@@ -160,10 +184,6 @@ class StartActivityViewController: UIViewController {
         let currentTime = Date().timeIntervalSince(startValueForTimer!)
         
         currentDuration = currentTime
-        let timeFormatter = DateComponentsFormatter()
-        timeFormatter.allowedUnits = [.hour, .minute, .second]
-        timeFormatter.zeroFormattingBehavior = .pad
-        
         timerLabel.text = timeFormatter.string(from: currentTime + activityDuration)
     }
     
@@ -189,25 +209,18 @@ class StartActivityViewController: UIViewController {
     @IBAction func didFinishTracking(_ sender: FinishButton) {
         locationManager.stopUpdatingLocation()
         
-        let context = coreDataContainer.context
-        let activity = CDActivity(context: context)
-        
         activityDuration += currentDuration
         timer?.invalidate()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
         
-        let activityStartTime = dateFormatter.string(from: activityDate!)
-        let activityEndTime = dateFormatter.string(from: activityDate! + activityDuration)
+        let startTime = timeFormatterShort.string(from: activityDate!)
+        let endTime = timeFormatterShort.string(from: activityDate! + activityDuration)
         
-        activity.type = activityType
-        activity.date = activityDate
-        activity.distance = activityDistance
-        activity.startTime = activityStartTime
-        activity.endTime = activityEndTime
-        activity.duration = activityDuration
+        let activityType = activityType
+        let startDate = dateFormatter.string(from: activityDate ?? Date())
+        let distance = String(format: "%.2f км", activityDistance / 1000)
+        let duration = timeFormatter.string(from: activityDuration)
         
-        coreDataContainer.saveContext()
+        CDController.saveActivity(distance, duration!, activityType!, startDate, startTime, endTime)
         
         navigationController?.popViewController(animated: true)
     }

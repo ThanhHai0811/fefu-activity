@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MH3ViewController" customModule="ДВФУПример" customModuleProvider="target">
             <connections>
+                <outlet property="LoginField" destination="QYl-IF-7FT" id="xOV-jW-I4L"/>
+                <outlet property="PasswordField" destination="doS-KC-faj" id="15H-MZ-Pvh"/>
                 <outlet property="continueButton" destination="WEb-AA-nz2" id="Bw2-mE-sAu"/>
             </connections>
         </placeholder>
@@ -48,6 +50,9 @@
                         <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="DidTapCoutinueButton:" destination="-1" eventType="touchUpInside" id="aQO-sP-vcA"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ZwO-YL-Eje">
                     <rect key="frame" x="0.0" y="416" width="414" height="388"/>
