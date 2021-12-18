@@ -15,8 +15,8 @@ class SecureFEFUTextField: SignFEFUTextField {
         self.isSecureTextEntry = true
         
         //set eyes
-        toggleButton.setImage(UIImage(named: "OpenEye"), for: .normal)
-        toggleButton.setImage(UIImage(named:"ClosedEye"), for: .selected)
+        toggleButton.setImage(UIImage(named: "eyeclosed"), for: .normal)
+        toggleButton.setImage(UIImage(named:"eyeopen"), for: .selected)
         
         //add padding
         toggleButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)

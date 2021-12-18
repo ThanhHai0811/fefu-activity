@@ -1,10 +1,3 @@
-//
-//  MH2ViewController.swift
-//  ДВФУПример
-//
-//  Created by Фам Тхань Хай on 07/10/2021.
-//
-
 import UIKit
 
 class MH2ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {

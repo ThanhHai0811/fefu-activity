@@ -26,13 +26,13 @@
 		0488FA42270E045F00A5EE20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA41270E045F00A5EE20 /* ViewController.swift */; };
 		0488FA45270E045F00A5EE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA43270E045F00A5EE20 /* Main.storyboard */; };
 		0488FA4A270E046100A5EE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA48270E046100A5EE20 /* LaunchScreen.storyboard */; };
-		0488FA73270E959600A5EE20 /* MH2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA71270E959600A5EE20 /* MH2ViewController.swift */; };
-		0488FA74270E959600A5EE20 /* MH2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA72270E959600A5EE20 /* MH2ViewController.xib */; };
-		0488FA77270EA1C400A5EE20 /* MH3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488FA75270EA1C400A5EE20 /* MH3ViewController.swift */; };
-		0488FA78270EA1C400A5EE20 /* MH3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488FA76270EA1C400A5EE20 /* MH3ViewController.xib */; };
 		048C8B8F272591DD00B83068 /* fefuactivity.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 048C8B8D272591DD00B83068 /* fefuactivity.xcdatamodeld */; };
 		049748DC272636F0000B17CF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049748DA272636F0000B17CF /* ProfileViewController.swift */; };
 		049748DD272636F0000B17CF /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049748DB272636F0000B17CF /* ProfileViewController.xib */; };
+		04C48B28276D848300B577C4 /* MH2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C48B26276D848300B577C4 /* MH2ViewController.swift */; };
+		04C48B29276D848300B577C4 /* MH2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C48B27276D848300B577C4 /* MH2ViewController.xib */; };
+		04C48B2C276D848F00B577C4 /* MH3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C48B2A276D848F00B577C4 /* MH3ViewController.swift */; };
+		04C48B2D276D848F00B577C4 /* MH3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04C48B2B276D848F00B577C4 /* MH3ViewController.xib */; };
 		04CBF82F271BA5AE001B33C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CBF82E271BA5AD001B33C8 /* Assets.xcassets */; };
 		04CCB49D2755126C00ACEA5D /* ActivityFEFUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB49C2755126C00ACEA5D /* ActivityFEFUButton.swift */; };
 		04CCB49F2755129300ACEA5D /* StartActivityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CCB49E2755129300ACEA5D /* StartActivityButton.swift */; };
@@ -85,13 +85,13 @@
 		0488FA4B270E046100A5EE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0488FA50270E046100A5EE20 /* ДВФУПримерTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ДВФУПримерTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0488FA5A270E046100A5EE20 /* ДВФУПримерUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ДВФУПримерUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0488FA71270E959600A5EE20 /* MH2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH2ViewController.swift; sourceTree = "<group>"; };
-		0488FA72270E959600A5EE20 /* MH2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MH2ViewController.xib; sourceTree = "<group>"; };
-		0488FA75270EA1C400A5EE20 /* MH3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH3ViewController.swift; sourceTree = "<group>"; };
-		0488FA76270EA1C400A5EE20 /* MH3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MH3ViewController.xib; sourceTree = "<group>"; };
 		048C8B8E272591DD00B83068 /* fefuactivity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fefuactivity.xcdatamodel; sourceTree = "<group>"; };
 		049748DA272636F0000B17CF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		049748DB272636F0000B17CF /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		04C48B26276D848300B577C4 /* MH2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH2ViewController.swift; sourceTree = "<group>"; };
+		04C48B27276D848300B577C4 /* MH2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MH2ViewController.xib; sourceTree = "<group>"; };
+		04C48B2A276D848F00B577C4 /* MH3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH3ViewController.swift; sourceTree = "<group>"; };
+		04C48B2B276D848F00B577C4 /* MH3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MH3ViewController.xib; sourceTree = "<group>"; };
 		04CBF82E271BA5AD001B33C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CCB49C2755126C00ACEA5D /* ActivityFEFUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFEFUButton.swift; sourceTree = "<group>"; };
 		04CCB49E2755129300ACEA5D /* StartActivityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartActivityButton.swift; sourceTree = "<group>"; };
@@ -228,10 +228,10 @@
 		04EA2192273FA3FA00677886 /* Homework1 */ = {
 			isa = PBXGroup;
 			children = (
-				0488FA75270EA1C400A5EE20 /* MH3ViewController.swift */,
-				0488FA76270EA1C400A5EE20 /* MH3ViewController.xib */,
-				0488FA71270E959600A5EE20 /* MH2ViewController.swift */,
-				0488FA72270E959600A5EE20 /* MH2ViewController.xib */,
+				04C48B26276D848300B577C4 /* MH2ViewController.swift */,
+				04C48B27276D848300B577C4 /* MH2ViewController.xib */,
+				04C48B2A276D848F00B577C4 /* MH3ViewController.swift */,
+				04C48B2B276D848F00B577C4 /* MH3ViewController.xib */,
 			);
 			path = Homework1;
 			sourceTree = "<group>";
@@ -354,13 +354,13 @@
 				044AEAEE27566FF100696E1A /* StartActivityViewController.xib in Resources */,
 				049748DD272636F0000B17CF /* ProfileViewController.xib in Resources */,
 				046C36892726A6E800453CB7 /* ActivityDetailsViewController.xib in Resources */,
-				0488FA78270EA1C400A5EE20 /* MH3ViewController.xib in Resources */,
+				04C48B2D276D848F00B577C4 /* MH3ViewController.xib in Resources */,
 				0421EA62272A516D007BDA5D /* Table1ViewCell.xib in Resources */,
 				04CBF82F271BA5AE001B33C8 /* Assets.xcassets in Resources */,
 				0488FA45270E045F00A5EE20 /* Main.storyboard in Resources */,
 				044AEAF6275679C400696E1A /* ActivityTypeCollectionViewCell.xib in Resources */,
 				0421EA68272C1621007BDA5D /* DetailVCViewController.xib in Resources */,
-				0488FA74270E959600A5EE20 /* MH2ViewController.xib in Resources */,
+				04C48B29276D848300B577C4 /* MH2ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +389,6 @@
 				0488FA42270E045F00A5EE20 /* ViewController.swift in Sources */,
 				0416FB142756428600CC2355 /* SecureFEFUTextField.swift in Sources */,
 				0421EA61272A516D007BDA5D /* Table1ViewCell.swift in Sources */,
-				0488FA77270EA1C400A5EE20 /* MH3ViewController.swift in Sources */,
 				0421EA67272C1621007BDA5D /* DetailVCViewController.swift in Sources */,
 				0423A63E2755346600A17595 /* TabsViewController.swift in Sources */,
 				048C8B8F272591DD00B83068 /* fefuactivity.xcdatamodeld in Sources */,
@@ -399,10 +398,11 @@
 				04FF7D9B2728434800FB9F1F /* FEFUCoreDataContainer.swift in Sources */,
 				04DF61B1276B7FD2004F3EC7 /* Models.swift in Sources */,
 				04DF61AF276B7F77004F3EC7 /* Auth.swift in Sources */,
-				0488FA73270E959600A5EE20 /* MH2ViewController.swift in Sources */,
 				04CCB4A3275512D100ACEA5D /* FinishButton.swift in Sources */,
 				049748DC272636F0000B17CF /* ProfileViewController.swift in Sources */,
 				04CCB49D2755126C00ACEA5D /* ActivityFEFUButton.swift in Sources */,
+				04C48B28276D848300B577C4 /* MH2ViewController.swift in Sources */,
+				04C48B2C276D848F00B577C4 /* MH3ViewController.swift in Sources */,
 				044AEAED27566FF100696E1A /* StartActivityViewController.swift in Sources */,
 				0488FA3E270E045F00A5EE20 /* AppDelegate.swift in Sources */,
 				0488FA40270E045F00A5EE20 /* SceneDelegate.swift in Sources */,
@@ -640,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77CAWU6HZ4;
@@ -664,6 +665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 77CAWU6HZ4;

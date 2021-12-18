@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,77 +11,78 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MH3ViewController" customModule="ДВФУПример" customModuleProvider="target">
             <connections>
-                <outlet property="LoginField" destination="QYl-IF-7FT" id="xOV-jW-I4L"/>
-                <outlet property="PasswordField" destination="doS-KC-faj" id="15H-MZ-Pvh"/>
-                <outlet property="continueButton" destination="WEb-AA-nz2" id="Bw2-mE-sAu"/>
+                <outlet property="LoginField" destination="lP4-g6-ChT" id="Zmf-a5-JaB"/>
+                <outlet property="PasswordField" destination="owt-S3-B56" id="ghJ-4g-sXH"/>
+                <outlet property="continueButton" destination="3ph-BY-FdW" id="o2b-AQ-AtI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VPN-m1-C3F">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYl-IF-7FT" customClass="SignFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
-                    <rect key="frame" x="17" y="120" width="380" height="53"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lP4-g6-ChT" customClass="SignFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
+                    <rect key="frame" x="17" y="76" width="380" height="53"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="53" id="ltM-cG-nfz"/>
+                        <constraint firstAttribute="height" constant="53" id="BGV-5s-ewS"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="doS-KC-faj" customClass="SecureFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
-                    <rect key="frame" x="17" y="193" width="380" height="53"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owt-S3-B56" customClass="SecureFEFUTextField" customModule="ДВФУПример" customModuleProvider="target">
+                    <rect key="frame" x="17" y="149" width="380" height="53"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="53" id="XAh-rI-lP7"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="Yvx-3s-4BC"/>
+                        <constraint firstAttribute="height" constant="53" id="vHh-tL-zCh"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEb-AA-nz2" customClass="ActivityFEFUButton" customModule="ДВФУПример" customModuleProvider="target">
-                    <rect key="frame" x="40" y="288" width="334" height="56"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ph-BY-FdW" customClass="ActivityFEFUButton" customModule="ДВФУПример" customModuleProvider="target">
+                    <rect key="frame" x="40" y="244" width="334" height="56"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="56" id="eri-wr-LKZ"/>
+                        <constraint firstAttribute="height" constant="56" id="Hdu-eC-TyW"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Продолжить">
                         <backgroundConfiguration key="background" cornerRadius="12">
-                            <color key="backgroundColor" red="0.18888476209999999" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" name="ButtonBackgroundColor"/>
                         </backgroundConfiguration>
                         <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="DidTapCoutinueButton:" destination="-1" eventType="touchUpInside" id="aQO-sP-vcA"/>
+                        <action selector="DidTapCoutinueButton:" destination="-1" eventType="touchUpInside" id="q5V-Fg-Krb"/>
                     </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ZwO-YL-Eje">
-                    <rect key="frame" x="0.0" y="416" width="414" height="388"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="IzY-5H-cI6">
+                    <rect key="frame" x="0.0" y="372" width="414" height="388"/>
                 </imageView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="LP5-jz-irs"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="ZwO-YL-Eje" firstAttribute="leading" secondItem="VPN-m1-C3F" secondAttribute="leading" id="5lz-BO-Zar"/>
-                <constraint firstItem="LP5-jz-irs" firstAttribute="trailing" secondItem="WEb-AA-nz2" secondAttribute="trailing" constant="40" id="6Re-RW-fr5"/>
-                <constraint firstItem="WEb-AA-nz2" firstAttribute="top" secondItem="doS-KC-faj" secondAttribute="bottom" constant="42" id="7C3-tS-m3A"/>
-                <constraint firstItem="doS-KC-faj" firstAttribute="leading" secondItem="LP5-jz-irs" secondAttribute="leading" constant="17" id="8Ap-uV-bvl"/>
-                <constraint firstItem="QYl-IF-7FT" firstAttribute="top" secondItem="LP5-jz-irs" secondAttribute="top" constant="32" id="J0h-TQ-k4Z"/>
-                <constraint firstItem="ZwO-YL-Eje" firstAttribute="top" secondItem="WEb-AA-nz2" secondAttribute="bottom" constant="72" id="Kyc-NG-YwN"/>
-                <constraint firstItem="QYl-IF-7FT" firstAttribute="leading" secondItem="LP5-jz-irs" secondAttribute="leading" constant="17" id="N7F-YL-3JD"/>
-                <constraint firstItem="WEb-AA-nz2" firstAttribute="leading" secondItem="LP5-jz-irs" secondAttribute="leading" constant="40" id="OJg-ia-Rue"/>
-                <constraint firstItem="LP5-jz-irs" firstAttribute="trailing" secondItem="doS-KC-faj" secondAttribute="trailing" constant="17" id="QCG-d1-iWF"/>
-                <constraint firstItem="doS-KC-faj" firstAttribute="top" secondItem="QYl-IF-7FT" secondAttribute="bottom" constant="20" id="TWb-LH-gnb"/>
-                <constraint firstItem="ZwO-YL-Eje" firstAttribute="trailing" secondItem="LP5-jz-irs" secondAttribute="trailing" id="Udc-7a-W4y"/>
-                <constraint firstItem="LP5-jz-irs" firstAttribute="trailing" secondItem="QYl-IF-7FT" secondAttribute="trailing" constant="17" id="cUf-Ah-5dv"/>
+                <constraint firstItem="owt-S3-B56" firstAttribute="top" secondItem="lP4-g6-ChT" secondAttribute="bottom" constant="20" id="64a-pm-zTW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lP4-g6-ChT" secondAttribute="trailing" constant="17" id="Buu-8W-KVg"/>
+                <constraint firstItem="IzY-5H-cI6" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Cbv-fY-Zu7"/>
+                <constraint firstItem="IzY-5H-cI6" firstAttribute="top" secondItem="3ph-BY-FdW" secondAttribute="bottom" constant="72" id="G18-DG-Y7r"/>
+                <constraint firstItem="owt-S3-B56" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="17" id="GiC-Tf-sBt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3ph-BY-FdW" secondAttribute="trailing" constant="40" id="Gs5-3O-Zk9"/>
+                <constraint firstItem="IzY-5H-cI6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W5N-gY-UcT"/>
+                <constraint firstItem="3ph-BY-FdW" firstAttribute="top" secondItem="owt-S3-B56" secondAttribute="bottom" constant="42" id="ali-oY-fNY"/>
+                <constraint firstItem="lP4-g6-ChT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="17" id="fcv-cm-78m"/>
+                <constraint firstItem="3ph-BY-FdW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="ggG-wi-6kM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="owt-S3-B56" secondAttribute="trailing" constant="17" id="rQv-lC-BVh"/>
+                <constraint firstItem="lP4-g6-ChT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="wxK-UL-hsT"/>
             </constraints>
-            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="136.95652173913044" y="87.388392857142847"/>
+            <point key="canvasLocation" x="132" y="80"/>
         </view>
     </objects>
     <resources>
         <image name="Background" width="414" height="388.5"/>
+        <namedColor name="ButtonBackgroundColor">
+            <color red="0.2669999897480011" green="0.061999998986721039" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
